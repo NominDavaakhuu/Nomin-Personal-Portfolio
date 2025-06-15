@@ -21,7 +21,18 @@ export function Navbar() {
           </a>
         </DockIcon>
         <DockIcon>
-          <Icons.work className="size-6" />
+          <a
+            href="/cv/Nomin_Davaakhuu_CV.pdf"
+            onClick={(e) => {
+              const confirmDownload = window.confirm("Do you want to download Nomin Davaakhuu's CV?");
+              if (!confirmDownload) {
+                e.preventDefault(); 
+              }
+            }}
+            download
+          >
+            <Icons.work className="size-6" />
+          </a>
         </DockIcon>
       </Dock>
     </div>
