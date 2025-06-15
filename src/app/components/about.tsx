@@ -32,7 +32,7 @@ const aboutMe = [
     Icon: LightningBoltIcon,
     name: "Interests",
     description:
-      "Passionate about frontend development, cloud technologies (AWS), and clean design systems.",
+      "Passionate about frontend development, cloud technologies, and clean design systems.",
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
     background: <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />,
   },

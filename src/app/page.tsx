@@ -8,6 +8,8 @@ import Experience from './components/experience';
 import Skills from './components/skills';
 import AnimatedGreeting from './components/opener';
 import { AboutMe } from './components/about';
+import ContactForm from './components/contactMe';
+import ScrollToTop from './components/scrollToTop';
 
 export default function Home() {
   return (
@@ -19,7 +21,9 @@ export default function Home() {
       {/* Background Particles */}
       <Particles
         className="absolute inset-0 z-0"
-        quantity={100}
+        quantity={200}
+        staticity={50}
+        size={2}
         ease={100}
         color="#fff"
         refresh
@@ -32,26 +36,40 @@ export default function Home() {
       </header>
 
       {/* Body / Hero Section */}
-      <section id="home" className="relative z-10 w-full max-w-6xl px-4 py-24">
+      <section id="home" className="relative z-10 w-full max-w-6xl px-4 pt-20">
         <Body />
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="relative z-10 w-full max-w-6xl px-4 py-24">
+      <section id="skills" className="relative z-10 w-full max-w-6xl px-4 ">
         <Skills />
       </section>
 
-    <AboutMe/>
+      {/* About Me Section */}
+      <AboutMe/>
 
       {/* Experience Section */}
       <div className="w-full py-36">
         <section
           id="experience"
-          className="relative z-10 max-w-6xl mx-auto px-4 text-white"
+          className="relative z-10 max-w-6xl mx-auto px-4 "
         >
           <Experience />
         </section>
       </div>
+
+      {/*Contact Section */}
+      <div className="w-full py-6 bg-gray-100 dark:bg-gray-900">
+        <section
+          id="contact"
+          className="relative z-10 max-w-6xl mx-auto px-4 text-gray-900 dark:text-white"
+        >
+          <ContactForm />
+        </section>
+      </div>
+
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
     </div>
   );
 }

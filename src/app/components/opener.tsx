@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { HyperText } from "@/components/magicui/hyper-text";
 
-const greetings = ["Sain uu","Hi", "Ola" , "Привет", "こんにちは",];
+const greetings = ["Sain uu","Hi",];
 
 export default function AnimatedGreetingIntro() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,7 +49,7 @@ export default function AnimatedGreetingIntro() {
         }}
         >
       <div className="max-w-4xl w-full text-center px-6">
-        <h1 className="text-8xl md:text-8xl font-extrabold text-accent drop-shadow-lg">
+        <h1 className="text-8xl md:text-10xl font-extrabold text-accent drop-shadow-lg">
           <HyperText key={greetings[currentIndex]}>{greetings[currentIndex]}</HyperText>
         </h1>
       </div>

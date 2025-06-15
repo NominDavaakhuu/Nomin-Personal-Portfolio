@@ -65,7 +65,7 @@ const Experience: React.FC = () => {
 
   return (
     <section className="relative w-full mx-auto px-8 py-12">
-      <HyperText className="text-2xl md:text-4xl lg:text-6xl font-bold text-center mb-6 text-white">
+      <HyperText className="text-2xl md:text-4xl lg:text-6xl font-bold text-center mb-10 text-white">
         Projects 
       </HyperText>
 
