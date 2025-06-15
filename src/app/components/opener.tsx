@@ -1,0 +1,59 @@
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { HyperText } from "@/components/magicui/hyper-text";
+
+const greetings = ["Sain uu","Hi", "Ola" , "Привет", "こんにちは",];
+
+export default function AnimatedGreetingIntro() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showIntro, setShowIntro] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+    if (!showIntro) return;
+
+    if (currentIndex < greetings.length - 1) {
+      const timeout = setTimeout(() => {
+        setCurrentIndex(currentIndex + 1);
+      }, 950);
+      return () => clearTimeout(timeout);
+    } else {
+      // Start fade out
+      const timeout = setTimeout(() => {
+        setFadeOut(true);
+      }, 900);
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, showIntro]);
+
+  useEffect(() => {
+    if (fadeOut) {
+      const timeout = setTimeout(() => {
+        setShowIntro(false);
+      }, 1000);
+      return () => clearTimeout(timeout);
+    }
+  }, [fadeOut]);
+
+  if (!showIntro) return null;
+
+  return (
+    <div
+        className={`fixed inset-0 z-50 flex justify-center items-center transition-opacity duration-1000 ${
+            fadeOut ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
+        }`}
+        style={{
+            backgroundColor: "var(--custom-bg)",
+            padding: "3rem",
+        }}
+        >
+      <div className="max-w-4xl w-full text-center px-6">
+        <h1 className="text-8xl md:text-8xl font-extrabold text-accent drop-shadow-lg">
+          <HyperText key={greetings[currentIndex]}>{greetings[currentIndex]}</HyperText>
+        </h1>
+      </div>
+    </div>
+  );
+}
+
