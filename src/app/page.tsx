@@ -9,7 +9,7 @@ import Skills from './components/skills';
 import AnimatedGreeting from './components/opener';
 import { AboutMe } from './components/about';
 import ContactForm from './components/contactMe';
-import ScrollToTop from './components/scrollToTop';
+import ScrollToTop from '../components/ui/scrollToTop';
 
 export default function Home() {
   return (

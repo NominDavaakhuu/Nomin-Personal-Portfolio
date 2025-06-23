@@ -11,6 +11,7 @@ import noteTakerImage from "../../../public/images/note.png";
 import { HyperText } from "@/components/magicui/hyper-text";
 
 interface ProjectExperience {
+  id: number;
   title: string;
   role: string;
   description: string;
@@ -21,34 +22,39 @@ interface ProjectExperience {
 }
 
 const experiences: ProjectExperience[] = [
-  {
+  { 
+    id: 1,
     title: "Event Calendar",
     role: "Front-End Developer",
     description:
       "Developed a full-stack web application to manage events efficiently with features like real-time calendar updates, user authentication, and role-based access.",
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Node.js", "Express", "MySQL"],
     duration: "March 2025 - May 2025",
-    link: "https://github.com/NominDavaakhuu/videoTranscoder-web-app",
+    link: "projectDetails/1",
     imageUrl: calendarImage,
   },
   {
+    id: 2,
     title: "Video Transcoding App",
     role: "Uni Project",
     description:
-      "Created an interactive dashboard to visualize sales data with charts and export capabilities, improving insights for stakeholders.",
-    technologies: ["Node.js", "AWS EC2", "AWS S3", "AWS RDS", "AWS-Cognito", "CSS Modules"],
+      "Developed a video transcoding app that converts videos into multiple formats and manages video files efficiently.",
+    technologies: ["Node.js", "AWS EC2", "AWS S3", "AWS RDS", "AWS-Cognito", "HTML & CSS"],
     duration: "Oct 2024 - Nov 2024",
-    link: "https://github.com/NominDavaakhuu/videoTranscoder-web-app",
+    // link: "https://github.com/NominDavaakhuu/videoTranscoder-web-app",
+    link: "projectDetails/2",
     imageUrl: transcoderImage,
   },
-  {
+  { 
+    id: 3,
     title: "Note-Taking App",
     role: "Uni Project",
     description:
-      "Created an interactive dashboard to visualize sales data with charts and export capabilities, improving insights for stakeholders.",
+      "Developed a robust mobile note-taking app with an intuitive UI to easily manage notes and tasks, featuring a customizable settings section for adjustable text size.",
     technologies: ["React Native", "Expo", "Node.js", "Express", "MySQL", "TailwindCSS"],
     duration: "May 2024 - Jun 2024",
-    link: "https://github.com/NominDavaakhuu/Note-taking-mobile-app",
+    // link: "https://github.com/NominDavaakhuu/Note-taking-mobile-app",
+    link: "projectDetails/3",
     imageUrl: noteTakerImage,
   },
 ];

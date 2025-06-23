@@ -15,7 +15,7 @@ export function Body() {
 
         <WordRotate 
           className="text-3xl md:text-5xl lg:text-6xl font-black text-accent "
-          words={['WEB', 'Front-End', 'FullStack']}
+          words={['SalesForce','WEB', 'Front-End', 'FullStack']}
         />
 
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white tracking-widest animate-fade-in-up">

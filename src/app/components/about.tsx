@@ -17,6 +17,8 @@ const aboutMe = [
       "Master of IT, QUT | Graduated June 2025. Focused on software engineering and project delivery.",
     className: "lg:row-start-1 lg:row-end-3 lg:col-start-1 lg:col-end-2",
     background: <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />,
+    href: "/edu",
+    cta: "See More",
   },
   {
     Icon: BackpackIcon,
@@ -25,8 +27,8 @@ const aboutMe = [
       "Interned as a software developer in a Fintech Start-Up company Stoik. Contributed to frontend systems using React & TypeScript.",
     className: "lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2",
     background: <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />,
-    href: "https://www.linkedin.com/company/soik-digital/posts/?feedView=all",
-    cta: "View Company",
+    href: "/workExperience",
+    cta: "See More",
   },
   {
     Icon: LightningBoltIcon,
@@ -68,4 +70,3 @@ export function AboutMe() {
     </section>
   );
 }
-

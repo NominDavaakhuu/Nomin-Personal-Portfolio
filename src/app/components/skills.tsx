@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Marquee } from "@/components/magicui/marquee";
+import Image from "next/image";
 
 const skills = () => {
   const skillList = [
@@ -41,6 +42,10 @@ const skills = () => {
       name: "Express.js",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     },
+    {
+      name: "SalesForce",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg",
+    },
   ];
 
   return (
@@ -51,7 +56,12 @@ const skills = () => {
             key={idx}
             className="flex items-center gap-2 mx-4 px-6 py-3 rounded-full border text-sm font-semibold bg-white text-gray-800 dark:bg-gray-900 dark:text-white border-gray-300 dark:border-gray-700 shadow-md"
           >
-            <img src={skill.logo} alt={skill.name} className="w-5 h-5" />
+            <Image 
+              width={20}
+              height={20}
+              src={skill.logo} 
+              alt={skill.name} 
+              className="w-5 h-5" />
             <span>{skill.name}</span>
           </div>
         ))}
