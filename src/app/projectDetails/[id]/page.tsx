@@ -34,7 +34,7 @@ const projects: Project[] = [
       "Custom animations",
       "WebGL rendering",
     ],
-    duration: "2 months",
+    duration: "Currently in progress",
     images: ["/images/room1.png", "/images/room2.png"],
     },
   {
