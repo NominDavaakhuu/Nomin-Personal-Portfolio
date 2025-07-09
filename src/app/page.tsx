@@ -1,14 +1,14 @@
 'use client';
 
 import './globals.css';
-import { Navbar } from "./components/navbar";
-import { Body } from "./components/hero";
+import { Navbar } from "./main/navbar";
+import { Body } from "./main/hero";
 import { Particles } from "@/components/magicui/particles";
-import Experience from './components/projects';
-import Skills from './components/skills';
-import AnimatedGreeting from './components/opener';
-import { AboutMe } from './components/about';
-import ContactForm from './components/contactMe';
+import Experience from './main/projects';
+import Skills from './main/skills';
+import AnimatedGreeting from './main/opener';
+import { AboutMe } from './main/about';
+import ContactForm from './main/contactMe';
 import ScrollToTop from '../components/ui/scrollToTop';
 
 export default function Home() {

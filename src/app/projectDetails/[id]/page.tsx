@@ -3,6 +3,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { use } from "react";
+import { BackButton } from "@/components/ui/backButton";
 
 type Project = {
   id: string;
@@ -83,8 +84,8 @@ const projects: Project[] = [
     storage: "AWS S3",
     database: "AWS RDS SQL",
     images: [
-      "/images/trancode.png",
-      "/images/video-transcoding-2.png",
+      "/images/transcode1.png",
+      "/images/transcode2.png",
     ],
   },
   {
@@ -120,6 +121,9 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ id: s
 
   return (
     <section className="max-w-5xl mx-auto p-8 bg-white dark:bg-gray-900 rounded-lg shadow-lg">
+      <div className="mb-6">
+        <BackButton label="Go back" className="text-white bg-background" />
+      </div>
       <h1 className="text-5xl font-extrabold mb-6 text-gray-900 dark:text-white">
         {project.title}
       </h1>

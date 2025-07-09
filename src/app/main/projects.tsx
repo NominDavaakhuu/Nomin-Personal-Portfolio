@@ -6,7 +6,7 @@ import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
 
 import calendarImage from "../../../public/images/calendar.png";
-import transcoderImage from "../../../public/images/trancode.png";
+import transcoderImage from "../../../public/images/transcode1.png";
 import noteTakerImage from "../../../public/images/note.png";
 import roomPortfolioImage from "../../../public/images/room1.png"; 
 import { HyperText } from "@/components/magicui/hyper-text";
@@ -116,8 +116,6 @@ const Experience: React.FC = () => {
               {exp.link && (
                 <a
                   href={exp.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="inline-block mt-4 text-accent hover:text-accent dark:text-violet-400 dark:hover:text-violet-300 font-medium underline"
                 >
                   View Project
