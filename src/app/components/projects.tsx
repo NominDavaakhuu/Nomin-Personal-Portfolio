@@ -30,7 +30,7 @@ const experiences: ProjectExperience[] = [
     description:
       "Developing a 3D portfolio using Three.js and Blender. The project aims to showcase my skills in 3D modeling and web development, featuring an interactive 3D room with various elements that highlight my work and interests.",
     technologies: ["Three.js", "TailwindCSS", "JavaScript", "Blender"],
-    duration: "Jul 2025 - Sep 2025",
+    duration: "Jul 2025 - Current",
     link: "projectDetails/1",
     imageUrl: roomPortfolioImage,
   },

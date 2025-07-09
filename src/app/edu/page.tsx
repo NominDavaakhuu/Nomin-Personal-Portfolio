@@ -9,16 +9,26 @@ const Education = [
   {
     Icon: Code,
     name: "Software Development",
-    description:
-      "Master of IT, QUT | Graduated June 2025. Focused on software engineering and project delivery.",
+    description:(
+      <>
+        <span className="font-bold">Master of Information Technology, </span>
+        <span className="block text-sm font-semibold text-indigo-500">GPA: 6.1/7.0 </span>
+        QUEENSLAND UNIVERISTY OF TECHNOLOGY | Graduated June 2025. Focused on software development and project management.
+      </>
+    ),
     className: "lg:row-start-1 lg:col-start-1",
     background: <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />,
   },
   {
     Icon: Calculator,
     name: "Accounting",
-    description:
-      "Bachelor of Business Administration, NUM | Graduated June 2020. Focused on accounting and finance.",
+    description:(
+      <>
+        <span className="font-bold">Bachelor of Business Administration, </span>
+        <span className="block text-sm font-semibold text-indigo-500">GPA: 3.4/4.0 </span>
+        NATIONAL UNIVERSITY OF MONGOLIA | Graduated June 2020. Focused on accounting and finance.
+      </>
+    ),
     className: "lg:row-start-2 lg:col-start-1",
     background: <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />,
   },

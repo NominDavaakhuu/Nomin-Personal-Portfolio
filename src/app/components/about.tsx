@@ -34,7 +34,7 @@ const aboutMe = [
     Icon: LightningBoltIcon,
     name: "Interests",
     description:
-      "Passionate about frontend development, cloud technologies, and clean design systems.",
+      "Passionate about frontend development, cloud technologies, and clean design systems. Thrive in collaborative, team-driven environments. Naturally curious, highly coachable, and always eager to grow.",
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
     background: <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />,
   },
@@ -42,7 +42,7 @@ const aboutMe = [
     Icon: RocketIcon,
     name: "Current Project",
     description:
-      "Building an 3D portfolio with Three.js and starting with blender.",
+      "Building a 3D portfolio with Three.js and starting with blender.",
     className: "lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3",
     background: <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />,
     href: "/projectDetails/1",
@@ -50,11 +50,13 @@ const aboutMe = [
   },
   {
     Icon: PersonIcon,
-    name: "Personal",
+    name: "Community Involvement",
     description:
-      "Love learning new tools, mentoring peers, and collaborating on team-driven projects. Curious and coachable.",
+      "Loves learning new tools, building connections, and giving back through volunteering and peer mentoring. ",
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-3",
     background: <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />,
+    href: "/personal",
+    cta: "See More",
   },
 ];
 
