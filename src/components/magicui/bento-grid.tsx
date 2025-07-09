@@ -3,7 +3,6 @@ import { ComponentPropsWithoutRef, ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { text } from "stream/consumers";
 
 interface BentoGridProps extends ComponentPropsWithoutRef<"div"> {
   children: ReactNode;
@@ -62,7 +61,7 @@ const BentoCard = ({
       <h3 className="text-xl font-semibold text-white dark:text-neutral-300">
         {name}
       </h3>
-      <p className="max-w-lg text-neutral-400">{description}</p>
+      <p className="w-auto text-neutral-400">{description}</p>
     </div>
 
     {href && cta && (

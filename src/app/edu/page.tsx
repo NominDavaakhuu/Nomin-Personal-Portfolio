@@ -1,14 +1,13 @@
 "use client";
 
-import {
-  StackIcon,
-} from "@radix-ui/react-icons";
+import { Code } from "lucide-react";
+import { Calculator } from "lucide-react";
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import { BackButton } from "@/components/ui/backButton";
 
-const workExperience = [
+const Education = [
   {
-    Icon: StackIcon,
+    Icon: Code,
     name: "Software Development",
     description:
       "Master of IT, QUT | Graduated June 2025. Focused on software engineering and project delivery.",
@@ -16,7 +15,7 @@ const workExperience = [
     background: <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />,
   },
   {
-    Icon: StackIcon,
+    Icon: Calculator,
     name: "Accounting",
     description:
       "Bachelor of Business Administration, NUM | Graduated June 2020. Focused on accounting and finance.",
@@ -35,7 +34,7 @@ export default function EducationPage() {
         Education
       </h2>
       <BentoGrid className="lg:grid-rows-2">
-        {workExperience.map((item) => (
+        {Education.map((item) => (
           <BentoCard key={item.name} {...item} />
         ))}
       </BentoGrid>

@@ -1,7 +1,8 @@
-
+'use client';
 import React from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { use } from "react";
 
 type Project = {
   id: string;
@@ -20,6 +21,23 @@ type Project = {
 const projects: Project[] = [
   {
     id: "1",
+    title: "Room Portfolio",
+    role: "Developer",
+    description:
+      "Developing a 3D portfolio using Three.js and Blender. The project aims to showcase my skills in 3D modeling and web development, featuring an interactive 3D room with various elements that highlight my work and interests.",
+    technologies: ["Three.js", "Blender", "JavaScript", "TailwindCSS"],
+    features: [
+      "Blender 3D modeling",
+      "Interactive 3D room",
+      "Responsive design",
+      "Custom animations",
+      "WebGL rendering",
+    ],
+    duration: "2 months",
+    images: ["/images/room1.png", "/images/room2.png"],
+    },
+  {
+    id: "2",
     title: "Event Calendar",
     role: "Front-End Developer",
     description:
@@ -48,7 +66,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "2",
+    id: "3",
     title: "Video Transcoding App",
     role: "Uni Project",
     description:
@@ -70,7 +88,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "3",
+    id: "4",
     title: "Note-Taking App",
     role: "Uni Project",
     description:
@@ -83,7 +101,7 @@ const projects: Project[] = [
     ],
     duration: "1 month",
     hostedOn: "Expo Go",
-    storage: "SQLite",
+    storage: "Local Storage",
     database: "SQLite",
     images: [
       "/images/note.png",
@@ -92,14 +110,9 @@ const projects: Project[] = [
   },
 ];
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default function ProjectDetailsPage({ params }: PageProps) {
-  const project = projects.find((p) => p.id === params.id);
+export default function ProjectDetailsPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params);
+  const project = projects.find((p) => p.id === id);
 
   if (!project) {
     notFound();
@@ -131,7 +144,7 @@ export default function ProjectDetailsPage({ params }: PageProps) {
                 src={src}
                 alt={`${project.title} screenshot ${idx + 1}`}
                 className={`w-full object-cover rounded-md ${
-                    project.id === "3" ? "max-w-48" : "h-auto"
+                    project.id === "4" ? "max-w-48" : "h-auto"
                 }`}
                 />
             </div>
@@ -200,4 +213,3 @@ export default function ProjectDetailsPage({ params }: PageProps) {
     </section>
   );
 }
-

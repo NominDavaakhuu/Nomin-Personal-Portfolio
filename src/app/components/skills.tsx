@@ -42,10 +42,6 @@ const skills = () => {
       name: "Express.js",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     },
-    {
-      name: "SalesForce",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg",
-    },
   ];
 
   return (

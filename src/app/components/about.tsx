@@ -24,7 +24,7 @@ const aboutMe = [
     Icon: BackpackIcon,
     name: "Work Experience",
     description:
-      "Interned as a software developer in a Fintech Start-Up company Stoik. Contributed to frontend systems using React & TypeScript.",
+      "Software developer with a background in accounting. Front-End Intern at STOIK.",
     className: "lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2",
     background: <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />,
     href: "/workExperience",
@@ -45,6 +45,8 @@ const aboutMe = [
       "Building an 3D portfolio with Three.js and starting with blender.",
     className: "lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3",
     background: <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />,
+    href: "/projectDetails/1",
+    cta: "See More",
   },
   {
     Icon: PersonIcon,

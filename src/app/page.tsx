@@ -2,9 +2,9 @@
 
 import './globals.css';
 import { Navbar } from "./components/navbar";
-import { Body } from "./components/body";
+import { Body } from "./components/hero";
 import { Particles } from "@/components/magicui/particles";
-import Experience from './components/experience';
+import Experience from './components/projects';
 import Skills from './components/skills';
 import AnimatedGreeting from './components/opener';
 import { AboutMe } from './components/about';
