@@ -47,7 +47,7 @@ const ContactForm = () => {
             Get in Touch
         </HyperText>
         <h1 className='text-center text-lg md:text-xl m-8 text-gray-700 dark:text-gray-300'>
-            I'd love to hear from you! Whether you have a question, want to collaborate, or just want to say hi, feel free to drop me a message.
+            I&apos;d love to hear from you! Whether you have a question, want to collaborate, or just want to say hi, feel free to drop me a message.
         </h1>
 
       <form ref={form} onSubmit={sendEmail} className="space-y-6">
