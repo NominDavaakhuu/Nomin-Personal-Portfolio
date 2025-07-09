@@ -10,6 +10,7 @@ import transcoderImage from "../../../public/images/transcode1.png";
 import noteTakerImage from "../../../public/images/note.png";
 import roomPortfolioImage from "../../../public/images/room1.png"; 
 import { HyperText } from "@/components/magicui/hyper-text";
+import { StaticImageData } from "next/image";
 
 interface ProjectExperience {
   id: number;
@@ -19,7 +20,7 @@ interface ProjectExperience {
   technologies: string[];
   duration: string;
   link?: string;
-  imageUrl?: any;
+  imageUrl?: StaticImageData;
 }
 
 const experiences: ProjectExperience[] = [
