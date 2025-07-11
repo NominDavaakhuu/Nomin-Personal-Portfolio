@@ -5,7 +5,11 @@ import { HyperText } from "@/components/magicui/hyper-text";
 
 const greetings = ["Hi"];
 
-export default function AnimatedGreetingIntro() {
+interface AnimatedGreetingProps {
+  onComplete: () => void;
+}
+
+export default function AnimatedGreeting({ onComplete }: AnimatedGreetingProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showIntro, setShowIntro] = useState(false); // default false
   const [fadeOut, setFadeOut] = useState(false);
@@ -17,8 +21,11 @@ export default function AnimatedGreetingIntro() {
     if (!hasSeenIntro) {
       setShowIntro(true);
       sessionStorage.setItem("hasSeenIntro", "true");
+    } else {
+      // If intro has been seen, immediately call onComplete
+      onComplete();
     }
-  }, []);
+  }, [onComplete]);
 
   // Progress greeting sequence
   useEffect(() => {
@@ -38,15 +45,16 @@ export default function AnimatedGreetingIntro() {
     }
   }, [currentIndex, showIntro]);
 
-  // Remove intro after fade
+  // Remove intro after fade and call onComplete
   useEffect(() => {
     if (fadeOut) {
       const timeout = setTimeout(() => {
         setShowIntro(false);
+        onComplete(); // Call onComplete when animation finishes
       }, 1000);
       return () => clearTimeout(timeout);
     }
-  }, [fadeOut]);
+  }, [fadeOut, onComplete]);
 
   if (!showIntro) return null;
 

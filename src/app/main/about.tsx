@@ -62,7 +62,7 @@ const aboutMe = [
 
 export function AboutMe() {
   return (
-    <section className="max-w-7xl mx-auto px-8 py-20">
+    <section className="max-w-7xl mx-auto px-8 py-20" id="about">
       <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center mb-12 text-indigo-950 dark:text-white">
         About Me
       </h2>

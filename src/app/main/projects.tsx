@@ -4,7 +4,6 @@ import React, { useRef } from "react";
 import { MagicCard } from "@/components/magicui/magic-card";
 import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
-
 import calendarImage from "../../../public/images/calendar.png";
 import transcoderImage from "../../../public/images/transcode1.png";
 import noteTakerImage from "../../../public/images/note.png";
@@ -23,7 +22,7 @@ interface ProjectExperience {
   imageUrl?: StaticImageData;
 }
 
-const experiences: ProjectExperience[] = [
+const projects: ProjectExperience[] = [
   { 
     id: 1,
     title: "Room Portfolio",
@@ -54,7 +53,6 @@ const experiences: ProjectExperience[] = [
       "Developed a video transcoding app that converts videos into multiple formats and manages video files efficiently.",
     technologies: ["Node.js", "AWS EC2", "AWS S3", "AWS RDS", "AWS-Cognito", "HTML & CSS"],
     duration: "Oct 2024 - Nov 2024",
-    // link: "https://github.com/NominDavaakhuu/videoTranscoder-web-app",
     link: "projectDetails/3",
     imageUrl: transcoderImage,
   },
@@ -66,13 +64,12 @@ const experiences: ProjectExperience[] = [
       "Developed a robust mobile note-taking app with an intuitive UI to easily manage notes and tasks, featuring a customizable settings section for adjustable text size.",
     technologies: ["React Native", "Expo", "Node.js", "Express", "MySQL", "TailwindCSS"],
     duration: "May 2024 - Jun 2024",
-    // link: "https://github.com/NominDavaakhuu/Note-taking-mobile-app",
     link: "projectDetails/4",
     imageUrl: noteTakerImage,
   },
 ];
 
-const Experience: React.FC = () => {
+const Projects: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -83,7 +80,7 @@ const Experience: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full mx-auto px-8 py-12">
+    <section className="relative w-full mx-auto px-8 py-12" id="projects">
       <HyperText className="text-2xl md:text-4xl lg:text-6xl font-bold text-center mb-10 text-white">
         Projects 
       </HyperText>
@@ -92,9 +89,9 @@ const Experience: React.FC = () => {
         {/* Scrollable container */}
         <div
           ref={scrollRef}
-          className="flex space-x-6 overflow-x-auto scroll-smooth no-scrollbar py-2 px-12"
+          className="flex space-x-6 overflow-x-auto scroll-smooth no-scrollbar py-2 px-2"
         >
-          {experiences.map((exp, index) => (
+          {projects.map((exp, index) => (
             <MagicCard
               key={index}
               className="min-w-[350px] max-w-[450px] p-6 rounded-2xl shadow-md flex-shrink-0"
@@ -129,13 +126,13 @@ const Experience: React.FC = () => {
         {/* Outside scroll buttons */}
         <button
           onClick={() => scroll("left")}
-          className="absolute -left-8 top-1/2 -translate-y-1/2 bg-inherit hover:bg-accent dark:bg-neutral-900 border border-gray-200 dark:border-gray-700 rounded-full p-2 shadow z-20"
+          className="absolute -left-16 top-1/2 -translate-y-1/2 bg-inherit hover:bg-accent dark:bg-neutral-900 border border-gray-200 dark:border-gray-700 rounded-full p-2 shadow z-20"
         >
           <ChevronLeftIcon className="w-5 h-5" />
         </button>
         <button
           onClick={() => scroll("right")}
-          className="absolute -right-8 top-1/2 -translate-y-1/2 bg-inherit hover:bg-accent dark:bg-neutral-900 border border-gray-200 dark:border-gray-700 rounded-full p-2 shadow z-20"
+          className="absolute -right-16 top-1/2 -translate-y-1/2 bg-inherit hover:bg-accent dark:bg-neutral-900 border border-gray-200 dark:border-gray-700 rounded-full p-2 shadow z-20"
         >
           <ChevronRightIcon className="w-5 h-5" />
         </button>
@@ -144,4 +141,4 @@ const Experience: React.FC = () => {
   );
 };
 
-export default Experience;
+export default Projects;
