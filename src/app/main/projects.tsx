@@ -28,7 +28,7 @@ const projects: ProjectExperience[] = [
     title: "Room Portfolio",
     role: "Developer",
     description:
-      "Developing a 3D portfolio using Three.js and Blender. The project aims to showcase my skills in 3D modeling and web development, featuring an interactive 3D room with various elements that highlight my work and interests.",
+      "Developing a 3D portfolio using Three.js and Blender. Aims to showcase my skills in 3D modeling and web development, featuring an interactive 3D room with various elements that highlight my work and interests.",
     technologies: ["Three.js", "TailwindCSS", "JavaScript", "Blender"],
     duration: "Jul 2025 - Current",
     link: "projectDetails/1",
@@ -94,10 +94,10 @@ const Projects: React.FC = () => {
           {projects.map((exp, index) => (
             <MagicCard
               key={index}
-              className="min-w-[350px] max-w-[450px] p-6 rounded-2xl shadow-md flex-shrink-0"
+              className="min-w-[250px] max-w-[400px] p-6 rounded-2xl shadow-md flex-shrink-0"
             >
               {exp.imageUrl && (
-                <div className="relative w-full h-[300px] mb-4 rounded-lg overflow-hidden">
+                <div className="relative w-full h-[250px] mb-4 rounded-lg overflow-hidden">
                   <Image
                     src={exp.imageUrl}
                     alt={exp.title}
@@ -126,13 +126,13 @@ const Projects: React.FC = () => {
         {/* Outside scroll buttons */}
         <button
           onClick={() => scroll("left")}
-          className="absolute -left-16 top-1/2 -translate-y-1/2 bg-inherit hover:bg-accent dark:bg-neutral-900 border border-gray-200 dark:border-gray-700 rounded-full p-2 shadow z-20"
+          className="absolute -left-12 top-1/2 -translate-y-1/2 bg-inherit hover:bg-accent dark:bg-neutral-900 border border-gray-200 dark:border-gray-700 rounded-full p-2 shadow z-20"
         >
           <ChevronLeftIcon className="w-5 h-5" />
         </button>
         <button
           onClick={() => scroll("right")}
-          className="absolute -right-16 top-1/2 -translate-y-1/2 bg-inherit hover:bg-accent dark:bg-neutral-900 border border-gray-200 dark:border-gray-700 rounded-full p-2 shadow z-20"
+          className="absolute -right-12 top-1/2 -translate-y-1/2 bg-inherit hover:bg-accent dark:bg-neutral-900 border border-gray-200 dark:border-gray-700 rounded-full p-2 shadow z-20"
         >
           <ChevronRightIcon className="w-5 h-5" />
         </button>
