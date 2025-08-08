@@ -24,7 +24,7 @@ const aboutMe = [
     Icon: BackpackIcon,
     name: "Work Experience",
     description:
-      "Software developer with a background in accounting. Front-End Intern at STOIK.",
+      "Software developer with a background in finance.",
     className: "lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2",
     background: <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />,
     href: "/workExperience",

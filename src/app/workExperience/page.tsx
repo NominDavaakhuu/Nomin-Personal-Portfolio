@@ -88,7 +88,7 @@ export default function ExperiencePage() {
       <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-20">
         Experience
       </h2>
-      <BentoGrid className="lg:grid-rows-4">
+      <BentoGrid className="lg:grid-rows-5">
         {workExperience.map((item) => (
           <BentoCard key={item.name} {...item} />
         ))}

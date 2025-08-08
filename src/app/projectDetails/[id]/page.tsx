@@ -8,6 +8,7 @@ import { BackButton } from "@/components/ui/backButton";
 type Project = {
   id: string;
   title: string;
+  link?: string;
   role: string;
   description: string;
   technologies?: string[];
@@ -39,7 +40,8 @@ const projects: Project[] = [
   },
   {
     id: "2",
-    title: "Find Your Zing Web app",
+    title: "Find Your Zing Website",
+    link: 'findyourzing.com.au',
     role: "Developer",
     description:
       "Developed a website as part of BigFish’s development team, implementing the design and creative vision provided by the design team. Built the application under the guidance of a senior developer, ensuring adherence to best practices and project requirements.",
@@ -52,7 +54,7 @@ const projects: Project[] = [
     images: ["/images/zing1.png", "/images/zing2.png"],
     },
   {
-    id: "2",
+    id: "3",
     title: "Event Calendar",
     role: "Front-End Developer",
     description:
@@ -81,8 +83,9 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "3",
+    id: "4",
     title: "Video Transcoding App",
+    link: 'https://github.com/NominDavaakhuu/Video-Transcoder-Web-Application',
     role: "Uni Project",
     description:
       "Developed a video transcoding app that converts videos into multiple formats and manages video files efficiently. Implemented secure user authentication using AWS Cognito and hosted the application on an AWS EC2 instance. Videos are stored in an S3 bucket, while metadata is saved in an RDS SQL database, ensuring scalable and secure management of video assets.",
@@ -103,8 +106,9 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "4",
+    id: "5",
     title: "Note-Taking App",
+    link: 'https://github.com/NominDavaakhuu/Note-Taking-Mobile-Application',
     role: "Uni Project",
     description:
       "Developed a robust note-taking mobile app to help users efficiently create, organize, and search their notes. Implemented offline support and a clean user interface with React Native.",
@@ -138,8 +142,26 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ id: s
       <div className="mb-6">
         <BackButton label="Go back" className="text-white bg-background" />
       </div>
-      <h1 className="text-5xl font-extrabold mb-6 text-gray-900 dark:text-white">
-        {project.title}
+      <h1 className="text-5xl font-extrabold mb-6 text-gray-900 dark:text-white flex items-center gap-2">
+        {project.link ? (
+          <a
+            href={project.link.startsWith('http') ? project.link : `https://${project.link}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent transition flex items-center gap-2"
+          >
+            {project.title}
+            <span>
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="inline-block ml-2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <polyline points="15 3 21 3 21 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        ) : (
+          project.title
+        )}
       </h1>
       <p className="text-2xl font-semibold mb-4 text-gray-700 dark:text-gray-300">
         {project.role}
@@ -162,7 +184,7 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ id: s
                 src={src}
                 alt={`${project.title} screenshot ${idx + 1}`}
                 className={`w-full object-cover rounded-md ${
-                    project.id === "4" ? "max-w-48" : "h-auto"
+                    project.id === "5" ? "max-w-48" : "h-auto"
                 }`}
                 />
             </div>
