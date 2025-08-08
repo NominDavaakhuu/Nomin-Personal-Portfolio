@@ -30,7 +30,7 @@ const workExperience = [
         As a front-end developer, I contributed to building responsive and user-friendly web applications using modern JavaScript frameworks like React. I implemented clean, efficient code that improved overall performance and boosted user engagement by 20%. Working within an Agile team environment, I gained hands-on experience in iterative development, sprint planning, and continuous improvement. I also utilized Git for effective version control and collaboration, and used JIRA for task management and team coordination, ensuring transparency, accountability, and timely project delivery.
       </>
     ),
-    className: "lg:row-start-1 lg:col-start-1",
+    className: "lg:row-start-2 lg:col-start-1",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />
     ),
@@ -44,7 +44,7 @@ const workExperience = [
           Led daily café operations as a shift manager, delivering exceptional customer service while training staff, managing workflows, and ensuring a smooth, high-quality dining experience.
         </>
     ),
-      className: "lg:row-start-2 lg:col-start-1",
+      className: "lg:row-start-3 lg:col-start-1",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />
     ),
@@ -58,7 +58,7 @@ const workExperience = [
         As an accountant, I was responsible for preparing and maintaining financial statements in accordance with accounting standards and internal policies. I ensured accurate and timely salary disbursements by processing monthly timesheets and payroll in compliance with employment regulations. Additionally, I utilised accounting software to efficiently manage transaction recording, generate reports, and perform account reconciliations, contributing to the financial accuracy and operational efficiency of the organisation.
         </>
     ),
-    className: "lg:row-start-3 lg:col-start-1",
+    className: "lg:row-start-4 lg:col-start-1",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />
     ),
@@ -72,7 +72,7 @@ const workExperience = [
         As a Junior Accountant, I was responsible for preparing monthly and annual Tax and Social Insurance reports in accordance with Mongolian regulations. I supported financial reporting, handled reconciliations, and ensured accurate documentation of transactions. My role involved using accounting software to streamline reporting processes and maintain compliance with internal policies and statutory requirements.
         </>
     ),
-      className: "lg:row-start-4 lg:col-start-1",
+      className: "lg:row-start-5 lg:col-start-1",
     background: (
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />
     ),
