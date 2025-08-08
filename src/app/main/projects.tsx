@@ -8,6 +8,7 @@ import calendarImage from "../../../public/images/calendar.png";
 import transcoderImage from "../../../public/images/transcode1.png";
 import noteTakerImage from "../../../public/images/note.png";
 import roomPortfolioImage from "../../../public/images/room1.png"; 
+import zingImage from "../../../public/images/zing1.png";
 import { HyperText } from "@/components/magicui/hyper-text";
 import { StaticImageData } from "next/image";
 
@@ -36,35 +37,46 @@ const projects: ProjectExperience[] = [
   },
   { 
     id: 2,
+    title: "Find Your Zing",
+    role: "Developer",
+    description:
+      'Developed a website as part of BigFish’s development team, implementing the design and creative vision provided by the design team. Built the application under the guidance of a senior developer, ensuring adherence to best practices and project requirements.',
+    technologies: ["Next.js", "TailwindCSS", "TypeScript"],
+    duration: "Jul 2025 - Aug 2025 ",
+    link: "projectDetails/2",
+    imageUrl: zingImage,
+  },
+  { 
+    id: 3,
     title: "Event Calendar",
     role: "Front-End Developer",
     description:
       "Developed a full-stack web application to manage events efficiently with features like real-time calendar updates, user authentication, and role-based access.",
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Node.js", "Express", "MySQL"],
     duration: "March 2025 - May 2025",
-    link: "projectDetails/2",
+    link: "projectDetails/3",
     imageUrl: calendarImage,
   },
   {
-    id: 3,
+    id: 4,
     title: "Video Transcoding App",
     role: "Uni Project",
     description:
       "Developed a video transcoding app that converts videos into multiple formats and manages video files efficiently.",
     technologies: ["Node.js", "AWS EC2", "AWS S3", "AWS RDS", "AWS-Cognito", "HTML & CSS"],
     duration: "Oct 2024 - Nov 2024",
-    link: "projectDetails/3",
+    link: "projectDetails/4",
     imageUrl: transcoderImage,
   },
   { 
-    id: 4,
+    id: 5,
     title: "Note-Taking App",
     role: "Uni Project",
     description:
       "Developed a robust mobile note-taking app with an intuitive UI to easily manage notes and tasks, featuring a customizable settings section for adjustable text size.",
     technologies: ["React Native", "Expo", "Node.js", "Express", "MySQL", "TailwindCSS"],
     duration: "May 2024 - Jun 2024",
-    link: "projectDetails/4",
+    link: "projectDetails/5",
     imageUrl: noteTakerImage,
   },
 ];
@@ -94,7 +106,7 @@ const Projects: React.FC = () => {
           {projects.map((exp, index) => (
             <MagicCard
               key={index}
-              className="min-w-[250px] max-w-[400px] p-6 rounded-2xl shadow-md flex-shrink-0"
+              className="min-w-[250px] max-w-[400px] p-8 rounded-2xl shadow-md flex-shrink-0 "
             >
               {exp.imageUrl && (
                 <div className="relative w-full h-[250px] mb-4 rounded-lg overflow-hidden">

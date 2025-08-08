@@ -36,6 +36,20 @@ const projects: Project[] = [
     ],
     duration: "Currently in progress",
     images: ["/images/room1.png", "/images/room2.png"],
+  },
+  {
+    id: "2",
+    title: "Find Your Zing Web app",
+    role: "Developer",
+    description:
+      "Developed a website as part of BigFish’s development team, implementing the design and creative vision provided by the design team. Built the application under the guidance of a senior developer, ensuring adherence to best practices and project requirements.",
+    technologies: ["Next.js", "TypeScript", "TailwindCSS"],
+    features: [
+      "Responsive interface",
+      "Mailchimp form integration",
+    ],
+    duration: "2 weeks",
+    images: ["/images/zing1.png", "/images/zing2.png"],
     },
   {
     id: "2",

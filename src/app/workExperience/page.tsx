@@ -9,6 +9,20 @@ import { BackButton } from "@/components/ui/backButton";
 const workExperience = [
   {
     Icon: Code,
+    name: "Developer - BigFish Design",
+    description: (
+      <>
+        <span className="block text-sm font-semibold text-indigo-500">July 2025 – Aug 2025</span>
+        As a contract developer, I helped build responsive, user-friendly front-end web applications using Next.js and TailwindCSS. I wrote clean, efficient code to create visually appealing, high-performance interfaces, collaborating closely with senior developers to ensure quality and best practices.
+      </>
+    ),
+    className: "lg:row-start-1 lg:col-start-1",
+    background: (
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20" />
+    ),
+  },
+  {
+    Icon: Code,
     name: "Front-End Intern - STOIK",
     description: (
       <>
